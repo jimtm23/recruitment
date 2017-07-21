@@ -1,0 +1,50 @@
+<div class="nav" role="navigation">
+    <ul>
+        <li><a [routerLink]="['/index']" class="home">Home</a></li>
+        <li><a [routerLink]="['/adminAccount','list']" class="list">AdminAccount List</a></li>
+    </ul>
+</div>
+<div id="persist-adminAccount" class="content scaffold-edit" role="main">
+    <h1>{{create ? "Create" : "Edit"}} AdminAccount</h1>
+    <ul class="errors" role="alert" *ngIf="errors">
+        <li *ngFor="let error of errors">{{error.message}}</li>
+    </ul>
+
+    <form name="save{className}" (ngSubmit)="save()">
+        <fieldset class="form">
+            <fieldset class="form">
+  <div class="fieldcontain required">
+    <label for="password">Password
+      <span class="required-indicator">*</span>
+    </label>
+    <input required="" name="password" id="password" [(ngModel)]="adminAccount.password" type="password" />
+  </div>
+  <div class="fieldcontain required">
+    <label for="username">Username
+      <span class="required-indicator">*</span>
+    </label>
+    <input required="" name="username" id="username" [(ngModel)]="adminAccount.username" type="text" />
+  </div>
+  <div class="fieldcontain">
+    <label for="accountLocked">Account Locked</label>
+    <input name="accountLocked" id="accountLocked" [(ngModel)]="adminAccount.accountLocked" type="checkbox" />
+  </div>
+  <div class="fieldcontain">
+    <label for="accountExpired">Account Expired</label>
+    <input name="accountExpired" id="accountExpired" [(ngModel)]="adminAccount.accountExpired" type="checkbox" />
+  </div>
+  <div class="fieldcontain">
+    <label for="passwordExpired">Password Expired</label>
+    <input name="passwordExpired" id="passwordExpired" [(ngModel)]="adminAccount.passwordExpired" type="checkbox" />
+  </div>
+  <div class="fieldcontain">
+    <label for="enabled">Enabled</label>
+    <input name="enabled" id="enabled" [(ngModel)]="adminAccount.enabled" type="checkbox" />
+  </div>
+</fieldset>
+        </fieldset>
+        <fieldset class="buttons">
+            <input type="submit" class="save" [value]="create ? 'Save' : 'Update'" />
+        </fieldset>
+    </form>
+</div>

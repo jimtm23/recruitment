@@ -1,0 +1,7 @@
+import asti.recruitment.AdminAccount
+
+model {
+	AdminAccount adminAccount
+}
+
+json g.render(adminAccount)

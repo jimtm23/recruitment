@@ -1,0 +1,124 @@
+<div class="nav" role="navigation">
+    <ul>
+        <li><a [routerLink]="['/index']" class="home">Home</a></li>
+        <li><a class="list" [routerLink]="['/applicant', 'list']" class="list">Applicant List</a></li>
+        <li><a class="create" [routerLink]="['/applicant', 'create']" class="create">New Applicant</a></li>
+    </ul>
+</div>
+<div id="show-part" class="content scaffold-show" role="main">
+    <h1>Show Applicant</h1>
+    <ol class="property-list applicant">
+  <li class="fieldcontain">
+    <span id="firstName-label" class="property-label">First Name</span>
+    <div class="property-value" aria-labelledby="firstName-label">
+      <span>{{applicant.firstName}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="lastName-label" class="property-label">Last Name</span>
+    <div class="property-value" aria-labelledby="lastName-label">
+      <span>{{applicant.lastName}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="middleName-label" class="property-label">Middle Name</span>
+    <div class="property-value" aria-labelledby="middleName-label">
+      <span>{{applicant.middleName}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="nameExtension-label" class="property-label">Name Extension</span>
+    <div class="property-value" aria-labelledby="nameExtension-label">
+      <span>{{applicant.nameExtension}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="email-label" class="property-label">Email</span>
+    <div class="property-value" aria-labelledby="email-label">
+      <span>{{applicant.email}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="cellphone-label" class="property-label">Cellphone</span>
+    <div class="property-value" aria-labelledby="cellphone-label">
+      <span>{{applicant.cellphone}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="residentialAddress-label" class="property-label">Residential Address</span>
+    <div class="property-value" aria-labelledby="residentialAddress-label">
+      <span>{{applicant.residentialAddress}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="permanentAddress-label" class="property-label">Permanent Address</span>
+    <div class="property-value" aria-labelledby="permanentAddress-label">
+      <span>{{applicant.permanentAddress}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="eNameOfSchool-label" class="property-label">E Name Of School</span>
+    <div class="property-value" aria-labelledby="eNameOfSchool-label">
+      <span>{{applicant.eNameOfSchool}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="eYearGraduated-label" class="property-label">E Year Graduated</span>
+    <div class="property-value" aria-labelledby="eYearGraduated-label">
+      <span>{{applicant.eYearGraduated}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="eHonor-label" class="property-label">E Honor</span>
+    <div class="property-value" aria-labelledby="eHonor-label">
+      <span>{{applicant.eHonor}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="sNameOfSchool-label" class="property-label">S Name Of School</span>
+    <div class="property-value" aria-labelledby="sNameOfSchool-label">
+      <span>{{applicant.sNameOfSchool}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="sYearGraduated-label" class="property-label">S Year Graduated</span>
+    <div class="property-value" aria-labelledby="sYearGraduated-label">
+      <span>{{applicant.sYearGraduated}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="sHonor-label" class="property-label">S Honor</span>
+    <div class="property-value" aria-labelledby="sHonor-label">
+      <span>{{applicant.sHonor}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="cNameOfSchool-label" class="property-label">C Name Of School</span>
+    <div class="property-value" aria-labelledby="cNameOfSchool-label">
+      <span>{{applicant.cNameOfSchool}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="cYearGraduated-label" class="property-label">C Year Graduated</span>
+    <div class="property-value" aria-labelledby="cYearGraduated-label">
+      <span>{{applicant.cYearGraduated}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="cHonor-label" class="property-label">C Honor</span>
+    <div class="property-value" aria-labelledby="cHonor-label">
+      <span>{{applicant.cHonor}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="hobbies-label" class="property-label">Hobbies</span>
+    <div class="property-value" aria-labelledby="hobbies-label">
+      <span>{{applicant.hobbies}}</span>
+    </div>
+  </li>
+</ol>
+
+    <a class="edit" [routerLink]="['/applicant', 'edit', applicant.id]">Edit</a>
+    <button type="button" (click)="destroy()">Delete</button>
+
+</div>

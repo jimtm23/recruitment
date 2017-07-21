@@ -1,0 +1,47 @@
+<div class="nav" role="navigation">
+    <ul>
+        <li><a [routerLink]="['/index']" class="home">Home</a></li>
+        <li><a [routerLink]="['/adminAccount','create']" class="create">New AdminAccount</a></li>
+    </ul>
+</div>
+<div id="list-adminAccount" class="content scaffold-list" role="main">
+    <h1>AdminAccount List</h1>
+    <table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Password</th>
+      <th>Username</th>
+      <th>Account Locked</th>
+      <th>Account Expired</th>
+      <th>Password Expired</th>
+      <th>Enabled</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr [ngClass]="{'even': e, 'odd': !e}" *ngFor="let adminAccount of adminAccountList; let e = even;">
+      <td>
+        <a [routerLink]="['/adminAccount','show',adminAccount.id]">{{adminAccount.id}}</a>
+      </td>
+      <td>
+        <span>{{adminAccount.password}}</span>
+      </td>
+      <td>
+        <span>{{adminAccount.username}}</span>
+      </td>
+      <td>
+        <span>{{adminAccount.accountLocked}}</span>
+      </td>
+      <td>
+        <span>{{adminAccount.accountExpired}}</span>
+      </td>
+      <td>
+        <span>{{adminAccount.passwordExpired}}</span>
+      </td>
+      <td>
+        <span>{{adminAccount.enabled}}</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

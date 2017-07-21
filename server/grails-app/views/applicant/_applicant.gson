@@ -1,0 +1,7 @@
+import asti.recruitment.Applicant
+
+model {
+	Applicant applicant
+}
+
+json g.render(applicant)

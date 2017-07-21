@@ -1,0 +1,8 @@
+import asti.recruitment.Applicant
+
+model {
+	Iterable<Applicant> applicantList
+}
+
+json tmpl.applicant(applicantList ?: [])
+

@@ -1,0 +1,8 @@
+import asti.recruitment.AdminAccount
+
+model {
+	Iterable<AdminAccount> adminAccountList
+}
+
+json tmpl.adminAccount(adminAccountList ?: [])
+
