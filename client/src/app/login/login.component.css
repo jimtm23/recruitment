@@ -1,28 +1,77 @@
-.alert {
-  width:200px;
-  margin-top:20px;
-  margin-bottom:20px;
+.login {
+  position:absolute; 
+  top:0; 
+  bottom:0; 
+  right:0; 
+  left:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #64b5f6;
+  clear: both;
 }
-
-.alert.alert-info {
-  color:#607D8B;
+.login-form {
+  position: relative;
+  width: 400px;
+  background-color: #eeeeee; 
+  margin-top:10px;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0px 0px 10px 10px #42a5f5;
 }
-
-.alert.alert-error {
-  color:red;
+.login-content {
+  margin-top:30px;
+  padding: 20px;
 }
-
-.help-block {
-  width:200px;
+.btn-green {
+  width: 100%;
+  background-color: #1565c0; 
+  color: white;
+}
+.btn-green:hover {
+  background-color: #0d47a1;
   color:white;
-  background-color:gray;
+}
+.asti-logo {
+  z-index: 999;
+  width:400px;
+  height:100px;
+  display: flex;
+  top:250px;
+  background-color: #263238;
+  padding-bottom:18px ;
+  border-radius: 5px 5px 0px 0px;
+  border-bottom:solid 2px #01579b;
+}
+.logo {
+  width:100px;
+  height:100px;
+}
+.logo-holder {
+  padding: 15px;
+  width:130px;
+  height:130px;
+  margin-left:130px;
+  margin-top:40px;
+  background-color: #eceff1;
+  border-radius:100px;
+}
+input {
+  padding-left:50px;
+}
+input:hover {
+  box-shadow: 0px 0px 1px 1px #1565c0;
+}
+label {
+  color:#37474f;
+}
+.icon {
+  width: 38px;
+  height:38px;
+  float: left;
+  position: absolute;
+  padding: 5px;
+  border-radius:2px 0px 0px 2px;
+  border-right:solid 2px #e0e0e0;
+  
 }
 
-.form-control {
-  width: 200px;
-  margin-bottom:10px;
-}
-
-.btn {
-  margin-top:20px;
-}
